@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WhiteDragon Software — minimal software for the open web</title>
-<meta name="description" content="WhiteDragon Software is an open-source organization that develops minimal software on Cloudflare Workers and Node.js: an edge AI worker, a forwarding proxy, a multi-tab desktop browser, a community forum, and two source-available licenses.">
+<meta name="description" content="WhiteDragon Software is an open-source organization that develops minimal software on Cloudflare Workers and Node.js: an edge AI worker, a forwarding proxy, a multi-tab desktop browser, an email worker, a local authenticator, and two source-available licenses.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
@@ -304,6 +304,14 @@
   /* ---------- license panel ---------- */
   .panel{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:36px}
   .panel+.panel{margin-top:24px}
+  .panel--duo{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;padding:0}
+  .panel--duo .lic{padding:32px}
+  .panel--duo .lic+.lic{border-left:1px solid var(--line)}
+  .lic-name{margin-top:14px;font-size:22px;line-height:1.2;letter-spacing:-.02em;font-weight:600}
+  .panel--duo .chip{margin-top:18px}
+  .panel--duo .terms{margin-top:18px}
+  .actions--compact{gap:8px;margin-top:22px}
+  .actions--compact .btn{min-height:36px;padding:0 12px;font-size:14px;gap:6px}
   .panel h2{font-size:24px}
   .panel p{margin-top:12px;color:var(--ink2);font-size:15px;max-width:46ch}
   .chip{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;gap:14px;min-height:44px;margin-top:24px;padding:0 8px 0 14px;background:var(--bg);border:1px solid var(--line);border-radius:8px;font:500 13px/1 var(--mono);color:var(--ink);cursor:pointer}
@@ -352,6 +360,9 @@
   @media (max-width:860px){
     .grid3{grid-template-columns:1fr}
     .panel{grid-template-columns:1fr;gap:28px;padding:28px}
+    .panel--duo{gap:0;padding:0}
+    .panel--duo .lic{padding:24px}
+    .panel--duo .lic+.lic{border-left:0;border-top:1px solid var(--line)}
     .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   }
   @media (max-width:760px){
@@ -394,6 +405,7 @@
     .facts{margin-top:40px}
     .actions{gap:10px}
     .btn{width:100%;justify-content:center}
+    .actions--compact .btn{width:auto}
     .chip{width:100%;justify-content:space-between;padding-left:14px}
   }
 </style>
@@ -516,7 +528,7 @@
     </div>
     <p class="kicker hero-eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Open-source organization</p>
     <h1>Minimal software for the open web.</h1>
-    <p class="lede">WhiteDragon Software is an open-source organization that develops minimal software on Cloudflare Workers and Node.js: an edge AI worker, a forwarding proxy, a multi-tab desktop browser, a community forum, and two source-available licenses. Each project uses few dependencies, requires no build step, and is small enough to be read in full.</p>
+    <p class="lede">WhiteDragon Software is an open-source organization that develops minimal software on Cloudflare Workers and Node.js: an edge AI worker, a forwarding proxy, a multi-tab desktop browser, an email worker, a local authenticator, and two source-available licenses. Each project uses few dependencies, requires no build step, and is small enough to be read in full.</p>
     <div class="actions">
       <a class="btn btn--solid" href="#projects">View projects <span aria-hidden="true">&#8594;</span></a>
       <a class="btn btn--ghost" href="https://github.com/whitedragon-software">GitHub organization <span class="arw" aria-hidden="true">&#8599;</span></a>
@@ -534,9 +546,9 @@
       <div class="s-head">
         <div>
           <h2>Projects</h2>
-          <p class="s-sub">The eight principal projects maintained by the organization.</p>
+          <p class="s-sub">The five principal projects maintained by the organization.</p>
         </div>
-        <p class="kicker">08 selected</p>
+        <p class="kicker">05 selected</p>
       </div>
 
       <ol class="projects">
@@ -614,45 +626,6 @@
           </div>
           <p class="status"><span class="mark mark--on" aria-hidden="true"></span>Active</p>
         </li>
-
-        <li class="project rv">
-          <div class="p-num" aria-hidden="true">06</div>
-          <div class="p-body">
-            <h3 class="p-title"><a href="https://github.com/whitedragon-software/whitedragon-forum">whitedragon-forum <span class="arw" aria-hidden="true">&#8599;</span></a></h3>
-            <p class="p-desc">The community space for the organization, built on git-forums and GitHub Discussions, so that discussion threads, issues and source code remain in a single location rather than on a separate platform.</p>
-            <ul class="tags"><li>GitHub Discussions</li><li>git-forums</li><li>Community</li></ul>
-            <div class="merge" aria-hidden="true">
-              <div class="merge-in"><span class="src"></span><span class="src"></span><span class="src"></span></div>
-              <div class="merge-bar"></div>
-            </div>
-            <p class="p-live"><a href="https://whitedragon-software.github.io/whitedragon-forum">Open the forum <span class="arw" aria-hidden="true">&#8599;</span></a></p>
-          </div>
-          <p class="status"><span class="mark mark--live" aria-hidden="true"></span>Live</p>
-        </li>
-
-        <li class="project rv">
-          <div class="p-num" aria-hidden="true">07</div>
-          <div class="p-body">
-            <h3 class="p-title"><a href="https://github.com/whitedragon-software/WD-NCL">WD-NCL <span class="arw" aria-hidden="true">&#8599;</span></a></h3>
-            <p class="p-desc">A non-commercial open-source license written from scratch, incorporating an absolute liability waiver. Short identifier: WD-NCL v1.0.</p>
-            <ul class="tags"><li>License</li><li>v1.0</li></ul>
-            <div class="chk" aria-hidden="true"><span class="box"></span><span class="box"></span><span class="box"></span></div>
-            <p class="p-live"><a href="/WD-NCL">See documentation</a></p>
-          </div>
-          <p class="status"><span class="mark mark--stable" aria-hidden="true"></span>Stable</p>
-        </li>
-
-        <li class="project rv">
-          <div class="p-num" aria-hidden="true">08</div>
-          <div class="p-body">
-            <h3 class="p-title"><a href="https://github.com/whitedragon-software/WD-SAL">WD-SAL <span class="arw" aria-hidden="true">&#8599;</span></a></h3>
-            <p class="p-desc">A source-available open-source license, also written from scratch, that adds an explicit patent grant (with a termination clause for patent litigation), a no-sublicensing restriction, and an even stronger liability disclaimer than WD-NCL. Short identifier: WD-SAL v1.0.</p>
-            <ul class="tags"><li>License</li><li>v1.0</li></ul>
-            <div class="chk" aria-hidden="true"><span class="box"></span><span class="box"></span><span class="box"></span></div>
-            <p class="p-live"><a href="/WD-SAL">See documentation</a></p>
-          </div>
-          <p class="status"><span class="mark mark--stable" aria-hidden="true"></span>Stable</p>
-        </li>
       </ol>
     </div>
   </section>
@@ -692,40 +665,33 @@
     <div class="wrap">
       <div class="s-head"><h2>Licenses</h2><p class="kicker">02 available</p></div>
 
-      <div class="panel rv">
-        <div>
+      <div class="panel panel--duo rv">
+        <div class="lic">
           <p class="badge">License</p>
-          <h2 style="margin-top:14px">WD-NCL v1.0</h2>
-          <p>The White Dragon Non-Commercial License — a custom non-commercial open-source license with an absolute liability waiver, written from scratch rather than borrowed. It is one of the projects above, not a blanket policy: it applies only where a repository says so, and it does not govern this website or the other projects by default.</p>
+          <h3 class="lic-name">WD-NCL v1.0</h3>
+          <p>The White Dragon Non-Commercial License: a custom non-commercial open-source license with an absolute liability waiver, written from scratch rather than borrowed. It applies only where a repository says so, and it does not govern this website or the other projects by default.</p>
           <button class="chip" type="button" data-copy="WD-NCL v1.0">WD-NCL v1.0 <span data-label>Copy</span></button>
-          <p class="mono" style="font-size:12px;margin-top:12px;color:var(--ink2)" role="status" data-copied></p>
-        </div>
-        <div>
+          <p class="mono" style="font-size:12px;margin-top:10px;color:var(--ink2)" role="status" data-copied></p>
           <ul class="terms">
-            <li><i aria-hidden="true">&#9670;</i><span>Non-commercial use</span></li>
-            <li><i aria-hidden="true">&#9670;</i><span>Source available to read and modify</span></li>
-            <li><i aria-hidden="true">&#9670;</i><span>Absolute liability waiver</span></li>
+              <li><i aria-hidden="true">&#9670;</i><span>Non-commercial use</span></li>
+              <li><i aria-hidden="true">&#9670;</i><span>Source available to read and modify</span></li>
+              <li><i aria-hidden="true">&#9670;</i><span>Absolute liability waiver</span></li>
           </ul>
           <div class="readmore-row">
             <a class="readmore" href="https://github.com/whitedragon-software/WD-NCL">Read the full text <span class="arw" aria-hidden="true">&#8599;</span></a>
             <a class="readmore" href="/WD-NCL">See documentation</a>
           </div>
         </div>
-      </div>
-
-      <div class="panel rv">
-        <div>
+        <div class="lic">
           <p class="badge">License</p>
-          <h2 style="margin-top:14px">WD-SAL v1.0</h2>
-          <p>The White Dragon Source-Available License — a second license written from scratch, for projects that need a patent grant and a no-sublicensing restriction on top of the same non-commercial terms as WD-NCL. Like WD-NCL, it applies only where a repository states it; it does not govern this website or the other projects by default.</p>
+          <h3 class="lic-name">WD-SAL v1.0</h3>
+          <p>The White Dragon Source-Available License: a second license written from scratch, for projects that need a patent grant and a no-sublicensing restriction on top of the same non-commercial terms as WD-NCL. Like WD-NCL, it applies only where a repository states it.</p>
           <button class="chip" type="button" data-copy="WD-SAL v1.0">WD-SAL v1.0 <span data-label>Copy</span></button>
-          <p class="mono" style="font-size:12px;margin-top:12px;color:var(--ink2)" role="status" data-copied></p>
-        </div>
-        <div>
+          <p class="mono" style="font-size:12px;margin-top:10px;color:var(--ink2)" role="status" data-copied></p>
           <ul class="terms">
-            <li><i aria-hidden="true">&#9670;</i><span>Non-commercial use, with an explicit patent grant</span></li>
-            <li><i aria-hidden="true">&#9670;</i><span>No sublicensing under different terms</span></li>
-            <li><i aria-hidden="true">&#9670;</i><span>Provided "as is" and "with all faults"</span></li>
+              <li><i aria-hidden="true">&#9670;</i><span>Non-commercial use, with an explicit patent grant</span></li>
+              <li><i aria-hidden="true">&#9670;</i><span>No sublicensing under different terms</span></li>
+              <li><i aria-hidden="true">&#9670;</i><span>Provided "as is" and "with all faults"</span></li>
           </ul>
           <div class="readmore-row">
             <a class="readmore" href="https://github.com/whitedragon-software/WD-SAL">Read the full text <span class="arw" aria-hidden="true">&#8599;</span></a>
@@ -740,11 +706,13 @@
     <div class="wrap">
       <h2>Feedback and contributions</h2>
       <p class="s-sub" style="margin-top:14px">Feedback, bug reports and pull requests are welcome across all the projects.</p>
-      <div class="actions">
+      <div class="actions actions--compact">
         <a class="btn btn--solid" href="https://github.com/whitedragon-software">Browse the organization <span class="arw" aria-hidden="true">&#8599;</span></a>
         <a class="btn btn--ghost" href="https://dev.to/whitedragon">Writing on DEV <span class="arw" aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn--ghost" href="https://t.me/whitedragon_software">Telegram channel <span class="arw" aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn--ghost" href="https://t.me/whitedragon_community">Telegram group <span class="arw" aria-hidden="true">&#8599;</span></a>
         <a class="btn btn--ghost" href="mailto:info@whitedragon.software">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px;flex:0 0 auto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:15px;height:15px;flex:0 0 auto">
             <rect x="3" y="5" width="18" height="14" rx="2.5"/>
             <path d="M3.5 7l8.5 6 8.5-6"/>
           </svg>
@@ -766,7 +734,8 @@
       <nav class="foot-links" aria-label="Footer">
         <a href="https://docs.whitedragon.software">Docs</a>
         <a href="https://github.com/whitedragon-software">GitHub <span class="arw" aria-hidden="true">&#8599;</span></a>
-        <a href="https://whitedragon-software.github.io/whitedragon-forum">Forum <span class="arw" aria-hidden="true">&#8599;</span></a>
+        <a href="https://t.me/whitedragon_software">Channel <span class="arw" aria-hidden="true">&#8599;</span></a>
+        <a href="https://t.me/whitedragon_community">Group <span class="arw" aria-hidden="true">&#8599;</span></a>
         <a href="#license">Licenses</a>
         <a href="https://dev.to/whitedragon">DEV <span class="arw" aria-hidden="true">&#8599;</span></a>
       </nav>

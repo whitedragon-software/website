@@ -1,268 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>whitedragon-dev Licenses</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #f4f4f0;
-            color: #222;
-            font-family: 'Liberation Serif', 'Times New Roman', Georgia, serif;
-            line-height: 1.7;
-            padding: 2rem 1rem;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 3rem 2.5rem;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            border-radius: 4px;
-        }
-
-        .header {
-            border-bottom: 3px solid #2a5c8a;
-            padding-bottom: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .header h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #1a2e4a;
-            letter-spacing: -0.5px;
-        }
-
-        .header .subhead {
-            font-size: 1.1rem;
-            color: #555;
-            margin-top: 0.2rem;
-        }
-
-        .license-list {
-            margin: 2rem 0;
-        }
-
-        .license-item {
-            display: flex;
-            align-items: baseline;
-            padding: 1rem 1.2rem;
-            margin-bottom: 0.8rem;
-            background-color: #f8f8f4;
-            border-left: 4px solid #2a5c8a;
-            border-radius: 0 4px 4px 0;
-            transition: background-color 0.2s;
-        }
-
-        .license-item:hover {
-            background-color: #f0f0ec;
-        }
-
-        .license-item .version {
-            font-weight: 700;
-            color: #1a2e4a;
-            min-width: 80px;
-            font-size: 1.1rem;
-        }
-
-        .license-item .description {
-            flex: 1;
-            color: #444;
-        }
-
-        .license-item .link {
-            margin-left: 1rem;
-        }
-
-        .license-item .link a {
-            color: #2a5c8a;
-            text-decoration: none;
-            border-bottom: 1px dotted #8ab3d0;
-            font-weight: 500;
-        }
-
-        .license-item .link a:hover {
-            border-bottom: 2px solid #2a5c8a;
-        }
-
-        .license-item .badge {
-            background-color: #1a2e4a;
-            color: #fff;
-            font-family: 'Courier New', monospace;
-            font-size: 0.7rem;
-            padding: 0.15rem 0.6rem;
-            border-radius: 12px;
-            margin-left: 0.5rem;
-            letter-spacing: 0.3px;
-        }
-
-        .license-item .badge.new {
-            background-color: #2a7a4a;
-        }
-
-        h2 {
-            font-size: 1.6rem;
-            margin-top: 2.2rem;
-            margin-bottom: 0.8rem;
-            color: #1a2e4a;
-            border-bottom: 1px solid #e0e0d8;
-            padding-bottom: 0.3rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            color: #2a5c8a;
-            text-decoration: none;
-            border-bottom: 1px dotted #8ab3d0;
-        }
-
-        a:hover {
-            border-bottom: 2px solid #2a5c8a;
-        }
-
-        .footer {
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #ddd;
-            font-size: 0.8rem;
-            color: #666;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #2a5c8a;
-            border-bottom: none;
-        }
-
-        .footer a:hover {
-            border-bottom: 1px solid #2a5c8a;
-        }
-
-        .note {
-            background-color: #fef9e7;
-            border: 1px solid #f0e0b8;
-            border-radius: 6px;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            font-size: 0.9rem;
-            color: #5a4a2a;
-        }
-
-        @media (max-width: 700px) {
-            body {
-                padding: 0.5rem;
-            }
-            .container {
-                padding: 1.5rem 1rem;
-            }
-            .header h1 {
-                font-size: 1.6rem;
-            }
-            .license-item {
-                flex-wrap: wrap;
-                padding: 0.8rem 1rem;
-            }
-            .license-item .version {
-                min-width: 60px;
-                font-size: 1rem;
-            }
-            .license-item .link {
-                margin-left: 0;
-                margin-top: 0.3rem;
-                width: 100%;
-            }
-        }
-
-        @media print {
-            body {
-                background: #fff;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                padding: 1rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="WhiteDragon-software Source-Available License v1.0 (WD-SAL v1.0).">
+<title>WD-SAL v1.0 — WhiteDragon-software</title>
+<style>
+:root{--bg:#fff;--text:#111;--muted:#686868;--line:#e8e8e8;--soft:#f7f7f5;--max:1180px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.site-header{border-bottom:1px solid var(--line);background:#fff}
+.nav{max-width:var(--max);margin:auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:14px;font-weight:650;letter-spacing:-.01em}
+.nav-links{display:flex;gap:25px;font-size:13px;color:var(--muted)}
+main{max-width:var(--max);margin:auto;padding:72px 28px 110px}
+.hero{max-width:850px;padding-bottom:62px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.13em;font-weight:650;margin:0 0 17px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-.055em;font-weight:600;margin:0}
+.lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:720px;margin:24px 0 0}
+.meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:27px}
+.tag{font-size:12px;border:1px solid var(--line);padding:5px 9px;color:var(--muted);background:#fff}
+.layout{display:grid;grid-template-columns:230px minmax(0,760px);gap:72px;margin-top:62px}
+.toc{position:sticky;top:24px;align-self:start}
+.toc-label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:650;margin-bottom:13px}
+.toc a{display:block;font-size:13px;color:var(--muted);padding:3px 0}
+.toc a:hover{color:var(--text)}
+.content section{scroll-margin-top:30px;margin-bottom:52px}
+h2{font-size:23px;line-height:1.2;letter-spacing:-.025em;font-weight:600;margin:0 0 17px}
+p{margin:0 0 15px}
+ul{padding-left:20px;margin:10px 0 18px}
+li{margin:4px 0}
+.note{border-left:2px solid #111;background:var(--soft);padding:18px 20px;margin:24px 0}
+.note-title{font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:650;margin-bottom:5px}
+.email{font-weight:600}
+.legal{font-size:13px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;margin-top:20px}
+.legal p{margin-bottom:15px}
+.legal p:last-child{margin-bottom:0}
+.final{padding-top:10px;border-top:1px solid var(--line)}
+footer{max-width:var(--max);margin:auto;padding:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
+@media(max-width:800px){
+ .nav{padding:17px 20px}.nav-links{gap:13px}.nav-links a:nth-child(n+3){display:none}
+ main{padding:50px 20px 80px}
+ .layout{grid-template-columns:1fr;gap:35px;margin-top:45px}
+ .toc{position:static;border:1px solid var(--line);padding:17px}
+ .toc a{display:inline-block;margin-right:14px}
+ footer{padding:24px 20px;display:block}
+ footer div+div{margin-top:8px}
+}
+</style>
 </head>
 <body>
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="https://whitedragon.software/">WhiteDragon-software</a>
+<div class="nav-links">
+<a href="https://whitedragon.software/">Home</a>
+<a href="#license">License</a>
+<a href="mailto:info@whitedragon.software">Contact</a>
+</div>
+</nav>
+</header>
 
-    <div class="container">
+<main>
+<header class="hero">
+<p class="kicker">License documentation</p>
+<h1>WhiteDragon-software<br>Source-Available License</h1>
+<p class="lead">A source-available, non-commercial license for software that may be used, studied, modified, and built upon while preserving attribution and WhiteDragon-software's commercial rights.</p>
+<div class="meta"><span class="tag">WD-SAL v1.0</span><span class="tag">2026-2030</span><span class="tag">Source available</span></div>
+</header>
 
-        <div class="header">
-            <h1>whitedragon-dev Licenses</h1>
-            <div class="subhead">Open-source license templates for developers</div>
-        </div>
+<div class="layout" id="license">
+<aside class="toc">
+<div class="toc-label">Contents</div>
+<a href="#grant">01 Grant of Rights</a>
+<a href="#definitions">02 Definitions</a>
+<a href="#permitted">03 Permitted Use</a>
+<a href="#internal">04 Internal Use</a>
+<a href="#commercial">05 Commercial Use</a>
+<a href="#attribution">06 Attribution</a>
+<a href="#authorship">07 Authorship</a>
+<a href="#distribution">08 Distribution</a>
+<a href="#contributions">09 Contributions</a>
+<a href="#patent">10 Patent License</a>
+<a href="#retaliation">11 Patent Retaliation</a>
+<a href="#trademarks">12 Trademarks</a>
+<a href="#warranty">13 Disclaimer</a>
+<a href="#liability">14 Liability</a>
+<a href="#indemnification">15 Indemnification</a>
+<a href="#termination">16 Termination</a>
+<a href="#severability">17 Severability</a>
+<a href="#waiver">18 No Waiver</a>
+<a href="#governing">19 Governing Law</a>
+<a href="#reservation">20 Reservation</a>
+<a href="#agreement">21 Entire Agreement</a>
+</aside>
 
-        <h2>Available Licenses</h2>
+<article class="content">
+<section id="grant"><h2>01. Grant of Rights</h2>
+<p>Permission is hereby granted, free of charge, to any person or entity obtaining a copy of this Software and associated documentation files (the "Software"), to use, copy, inspect, study, modify, merge, publish, and distribute the Software and derivative works, subject to the terms and conditions of this license.</p>
+<p>This license does not transfer ownership of the Software or any intellectual property rights in the Software.</p></section>
 
-        <p>
-            Below are the license templates provided by whitedragon-dev.
-            Each license is designed for specific use cases. Click on a license
-            to view its full documentation.
-        </p>
+<section id="definitions"><h2>02. Definitions</h2>
+<p><strong>"Copyright Holder"</strong> means WhiteDragon-software and any other copyright holder identified in the Software.</p>
+<p><strong>"Derivative Work"</strong> means a work based upon, incorporating, modifying, adapting, or otherwise substantially derived from the Software, to the extent recognized as such under applicable copyright law.</p>
+<p><strong>"Commercial Use"</strong> means use primarily for commercial advantage, monetary compensation, revenue generation, or as part of a commercial product, service, or production system.</p>
+<p>Commercial Use includes selling, licensing, renting, leasing, commercially distributing, commercially hosting, or incorporating the Software into a commercial product or service.</p>
+<p>Commercial Use does not include internal evaluation, testing, research, experimentation, development, or prototyping by a for-profit organization where the Software is not deployed as part of a commercial product, service, production system, or revenue-generating operation.</p>
+<p><strong>"Permitted Use"</strong> means any use that is not Commercial Use and complies with this license.</p></section>
 
-        <div class="license-list">
+<section id="permitted"><h2>03. Permitted Use</h2>
+<p>You may freely use, copy, inspect, study, modify, merge, and distribute the Software and Derivative Works for Permitted Use, including:</p>
+<ul><li>Personal use</li><li>Education</li><li>Academic or scientific research</li><li>Nonprofit use</li><li>Evaluation and testing</li><li>Internal research and experimentation</li><li>Development and prototyping</li><li>Forking and modification</li><li>Creation of Derivative Works</li></ul>
+<p>No fee or royalty is required for Permitted Use.</p></section>
 
-            <div class="license-item">
-                <span class="version">WD-SAL</span>
-                <span class="description">
-                    Source-Available License – For developers who want patent protection,
-                    no sublicensing by third parties, and the strongest liability waiver.
-                </span>
-                <span class="link">
-                    <a href="v1.0/index.html">View →</a>
-                </span>
-                <span class="badge new">v1.0</span>
-            </div>
+<section id="internal"><h2>04. Internal Use by For-Profit Organizations</h2>
+<p>A for-profit organization may use the Software internally for evaluation, testing, research, experimentation, development, or prototyping without obtaining a commercial license.</p>
+<p>The mere fact that an organization is operated for profit does not make its internal use Commercial Use.</p>
+<p>However, if the Software or a Derivative Work is incorporated into, deployed as part of, or materially relied upon by a commercial product, service, production system, or revenue-generating operation, that use constitutes Commercial Use and requires prior written permission under Section 5.</p></section>
 
-            <div class="license-item">
-                <span class="version">WD-NCL</span>
-                <span class="description">
-                    Non-Commercial License – For developers who want to share freely
-                    while preventing commercial exploitation.
-                </span>
-                <span class="link">
-                    <a href="../WD-NCL/v1.0/index.html">View →</a>
-                </span>
-                <span class="badge">v1.0</span>
-            </div>
+<section id="commercial"><h2>05. Commercial Use</h2>
+<p>Commercial Use is prohibited unless the Copyright Holder has granted prior written permission.</p>
+<p>The Copyright Holder reserves the exclusive right to authorize Commercial Use.</p>
+<div class="note"><div class="note-title">Commercial licensing</div><a class="email" href="mailto:info@whitedragon.software">info@whitedragon.software</a></div>
+<p>A separate commercial license may grant rights beyond those provided by this license.</p>
+<p>Unless expressly waived in writing by the Copyright Holder, all attribution and authorship requirements remain applicable to authorized Commercial Use.</p></section>
 
-        </div>
+<section id="attribution"><h2>06. Attribution and Copyright</h2>
+<p>You must retain all copyright, license, attribution, and other notices identifying the Copyright Holder included with the Software.</p>
+<p>If you distribute, publish, deploy, incorporate, or otherwise make the Software or a Derivative Work available as part of another project, you must provide clear and reasonably prominent attribution to the original Software and Copyright Holder.</p>
+<p>Where reasonably practical, attribution should identify:</p>
+<ul><li>WhiteDragon-software</li><li>The original project</li><li>The original repository or official website, if available</li><li>That the work incorporates or derives from the Software</li></ul>
+<p>Attribution may be provided in source code, documentation, a NOTICE file, credits, an about page, or another location reasonably appropriate to the distribution.</p>
+<p>You may not remove, obscure, replace, or alter the Copyright Holder's notices in a manner that falsely represents ownership or authorship.</p></section>
 
-        <div class="note">
-            <strong>Note:</strong> WD-NCL is hosted in a separate repository.
-            Both licenses are maintained by whitedragon-dev.
-        </div>
+<section id="authorship"><h2>07. Preservation of Authorship</h2>
+<p>You may modify, fork, adapt, and build upon the Software.</p>
+<p>You may claim copyright in your original modifications to the extent permitted by law.</p>
+<p>You may not:</p>
+<ul><li>Claim that you originally created the Software</li><li>Represent the original Software as your own work</li><li>Deliberately conceal the Software's origin</li><li>Remove or obscure its original copyright or attribution</li><li>Falsely imply that the Copyright Holder endorses your work</li><li>Present a fork or Derivative Work as the original Software without appropriate attribution</li></ul>
+<p>Your own copyright notices and branding may be added, but may not replace or obscure notices belonging to the Copyright Holder.</p></section>
 
-        <p style="margin-top:1.5rem; font-size:0.9rem; color:#666;">
-            <strong>Note:</strong> These licenses are not OSI-approved. They are
-            custom templates designed for specific use cases.
-        </p>
+<section id="distribution"><h2>08. Distribution and Relicensing</h2>
+<p>Modified versions and Derivative Works may be distributed for Permitted Use.</p>
+<p>You may not sublicense, relicense, or redistribute the Software under terms that remove, weaken, or conflict with this license.</p>
+<p>In particular, you may not grant recipients permission to:</p>
+<ul><li>Make unauthorized Commercial Use</li><li>Remove required attribution</li><li>Remove Copyright Holder notices</li><li>Claim the original Software as their own</li></ul>
+<p>You may apply separate terms to your own original work provided those terms do not restrict the rights granted by this license to the original Software.</p></section>
 
-        <div class="footer">
-            <p>
-                Copyright &copy; 2026 whitedragon-dev.
-            </p>
-            <p>
-                <a href="https://github.com/whitedragon-dev/WD-SAL">View WD-SAL on GitHub</a>
-                &bull;
-                <a href="https://github.com/whitedragon-dev/WD-NCL">View WD-NCL on GitHub</a>
-            </p>
-        </div>
+<section id="contributions"><h2>09. Contributions</h2>
+<p>You retain ownership of original contributions you submit to the Software.</p>
+<p>By submitting a contribution for inclusion in the Software, you grant the Copyright Holder a perpetual, worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, distribute, sublicense, and otherwise use that contribution as part of the Software.</p>
+<p>The Copyright Holder may determine whether and how contributions are incorporated.</p>
+<p>Reasonable attribution should be provided for incorporated contributions.</p></section>
 
-    </div>
+<section id="patent"><h2>10. Patent License</h2>
+<p>To the extent the Copyright Holder owns or controls patent claims necessarily infringed by the Software as provided by the Copyright Holder, the Copyright Holder grants you a worldwide, non-exclusive, royalty-free patent license to make, use, modify, and distribute the Software solely for Permitted Use.</p>
+<p>No patent license is granted for Commercial Use or for patents not owned or controlled by the Copyright Holder.</p></section>
 
+<section id="retaliation"><h2>11. Patent Retaliation</h2>
+<p>The patent license in Section 10 automatically terminates for any person or entity that initiates patent litigation or another patent proceeding against the Copyright Holder or a contributor alleging that the Software, a Derivative Work, or a contribution infringes a patent.</p>
+<p>This includes infringement lawsuits, patent-related counterclaims, cross-claims, and equivalent proceedings.</p>
+<p>This section does not restrict a person's right to defend against a patent claim brought by the Copyright Holder or a contributor.</p></section>
+
+<section id="trademarks"><h2>12. Trademarks</h2>
+<p>This license does not grant rights to the Copyright Holder's trademarks, trade names, logos, or other branding except as reasonably necessary for attribution or identification of the Software.</p>
+<p>You may not use such branding to falsely imply endorsement, sponsorship, partnership, or official affiliation.</p></section>
+
+<section id="warranty"><h2>13. Disclaimer of Warranty</h2>
+<div class="legal"><p><strong>THE SOFTWARE IS PROVIDED "AS IS", "AS AVAILABLE", AND "WITH ALL FAULTS".</strong></p>
+<p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COPYRIGHT HOLDER AND CONTRIBUTORS DISCLAIM ALL WARRANTIES, REPRESENTATIONS, GUARANTEES, AND CONDITIONS, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, SECURITY, ACCURACY, RELIABILITY, AVAILABILITY, AND PERFORMANCE.</p>
+<p>THE COPYRIGHT HOLDER DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE, SECURE, ACCURATE, AVAILABLE, COMPATIBLE, OR SUITABLE FOR ANY PARTICULAR PURPOSE.</p>
+<p>YOU ASSUME ALL RISK ARISING FROM YOUR USE, MISUSE, MODIFICATION, DISTRIBUTION, DEPLOYMENT, INTEGRATION, OR RELIANCE UPON THE SOFTWARE.</p>
+<p>THE COPYRIGHT HOLDER AND CONTRIBUTORS ASSUME NO LEGAL, FINANCIAL, COMMERCIAL, OPERATIONAL, SECURITY, ETHICAL, OR OTHER RESPONSIBILITY OR DUTY ARISING FROM YOUR USE OF THE SOFTWARE.</p></div></section>
+
+<section id="liability"><h2>14. Limitation of Liability</h2>
+<div class="legal"><p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COPYRIGHT HOLDER AND CONTRIBUTORS SHALL NOT BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY CLAIM, DAMAGE, LOSS, COST, EXPENSE, LIABILITY, OR OTHER CONSEQUENCE ARISING FROM OR RELATED TO THE SOFTWARE OR THIS LICENSE.</strong></p>
+<p>This includes:</p><ul><li>Use or misuse of the Software</li><li>Modification or integration</li><li>Distribution or deployment</li><li>Software errors or failures</li><li>Security vulnerabilities</li><li>Data loss or corruption</li><li>System failure</li><li>Business interruption</li><li>Loss of profits or revenue</li><li>Loss of business opportunity</li><li>Personal or property damage</li><li>Decisions made in reliance upon the Software or its output</li></ul>
+<p>THIS LIMITATION APPLIES REGARDLESS OF LEGAL THEORY, INCLUDING CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, WARRANTY, OR OTHERWISE, EVEN IF THE COPYRIGHT HOLDER OR A CONTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+<p>YOU AGREE NOT TO ASSERT THAT THE COPYRIGHT HOLDER OR A CONTRIBUTOR IS RESPONSIBLE FOR CONSEQUENCES ARISING FROM YOUR USE OF THE SOFTWARE, EXCEPT TO THE EXTENT SUCH LIABILITY CANNOT LAWFULLY BE EXCLUDED.</p>
+<p>NOTHING IN THIS LICENSE CREATES A DUTY OF CARE, FIDUCIARY DUTY, SUPPORT OBLIGATION, MAINTENANCE OBLIGATION, OR OTHER DUTY ON THE PART OF THE COPYRIGHT HOLDER OR CONTRIBUTORS.</p>
+<p>NOTHING IN THIS LICENSE EXCLUDES OR LIMITS LIABILITY THAT CANNOT LAWFULLY BE EXCLUDED OR LIMITED.</p></div></section>
+
+<section id="indemnification"><h2>15. Indemnification</h2>
+<p>To the maximum extent permitted by applicable law, you agree to defend, indemnify, and hold harmless the Copyright Holder and contributors from third-party claims, damages, liabilities, costs, and reasonable legal expenses arising directly from:</p>
+<ul><li>Your unlawful use of the Software</li><li>Your unauthorized Commercial Use</li><li>Your violation of this license</li><li>Your modification or distribution of the Software in violation of this license</li></ul>
+<p>This does not apply to claims arising solely from the unmodified Software as distributed by the Copyright Holder.</p></section>
+
+<section id="termination"><h2>16. Termination</h2>
+<p>Your rights under this license terminate automatically upon material breach.</p>
+<p>Upon termination, you must cease exercising the rights granted by this license and cease further distribution or use of the Software to the extent required by applicable law.</p>
+<p>Termination does not retroactively invalidate rights lawfully granted to third parties before termination.</p>
+<p>The Copyright Holder may reinstate rights or grant additional permissions in writing.</p>
+<p>Sections concerning ownership, attribution, authorship, trademarks, warranties, liability, indemnification, and provisions that by their nature should survive termination shall survive termination.</p></section>
+
+<section id="severability"><h2>17. Severability</h2><p>If any provision of this license is held invalid or unenforceable, it shall be enforced to the maximum extent permitted by law or severed to the minimum extent necessary, and the remaining provisions shall remain in effect.</p></section>
+
+<section id="waiver"><h2>18. No Waiver</h2><p>Failure by the Copyright Holder to enforce any provision of this license does not waive that provision or the right to enforce it later.</p><p>Any waiver must be expressly granted in writing.</p></section>
+
+<section id="governing"><h2>19. Governing Law and Venue</h2><p>This license shall be governed by the laws of the State of California, United States, without regard to conflict-of-laws principles.</p><p>To the maximum extent permitted by law, legal actions arising from or relating to this license shall be brought exclusively in the state or federal courts located in San Francisco, California.</p><p>You consent to the jurisdiction and venue of those courts.</p></section>
+
+<section id="reservation"><h2>20. Reservation of Rights</h2><p>All rights not expressly granted by this license are reserved by the Copyright Holder.</p><p>No rights are granted by implication, estoppel, or otherwise.</p></section>
+
+<section id="agreement"><h2>21. Entire Agreement</h2><p>This license constitutes the complete terms governing the rights granted with respect to the Software.</p><p>No additional rights are granted except by a separate written agreement with the Copyright Holder.</p></section>
+
+<section class="final">
+<div class="note"><div class="note-title">Commercial licensing inquiries</div><a class="email" href="mailto:info@whitedragon.software">info@whitedragon.software</a></div>
+<p>Copyright (c) 2026-2030 WhiteDragon-software. All rights reserved.</p>
+</section>
+</article>
+</div>
+</main>
+
+<footer>
+<div>WD-SAL v1.0</div>
+<div>WhiteDragon-software</div>
+</footer>
 </body>
-</html>
+        </html>

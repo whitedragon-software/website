@@ -158,7 +158,6 @@
   /* projects: five separate cards (two columns on desktop, a swipeable row on phones) */
   .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
   .project{position:relative;display:flex;flex-direction:column;padding:26px 28px 22px;border:1px solid var(--line2);border-radius:16px;background:var(--panel);overflow:hidden;transition:border-color .15s ease}
-  .project:last-child{grid-column:1 / -1}
   .project::before{content:"";position:absolute;left:28px;right:28px;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.55}
   .project:hover{border-color:var(--accent)}
   .p-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -176,6 +175,12 @@
   .status{display:inline-flex;align-items:center;gap:8px;font:12.5px/1 var(--mono);color:var(--ink2);white-space:nowrap}
   .mark{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 18%,transparent)}
   .p-dots{display:none}
+
+  /* scroll reveal: elements fade up as they enter the viewport. The hidden
+     state only applies when JS has marked the page, so no-JS shows everything. */
+  .js-rv .rv{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+  .js-rv .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.js-rv .rv{opacity:1;transform:none;transition:none}}
 
   /* approach */
   .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line2);border-radius:12px;background:var(--panel);overflow:hidden}
@@ -243,8 +248,9 @@
   @media (max-width:720px){
     .projects{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 20px;margin:0 -20px;padding:2px 20px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain}
     .projects::-webkit-scrollbar{display:none}
-    .project,.project:last-child{flex:0 0 84%;max-width:340px;scroll-snap-align:start;padding:22px 20px 18px;border-radius:14px}
+    .project{flex:0 0 84%;max-width:340px;scroll-snap-align:start;padding:22px 20px 18px;border-radius:14px}
     .project::before{left:20px;right:20px}
+    .js-rv .project.rv{opacity:1;transform:none;transition:none}
     .p-title{margin-top:16px;font-size:23px}
     .p-desc{font-size:14.5px}
     .p-dots{display:flex;gap:6px;justify-content:center;margin-top:16px}
@@ -351,7 +357,7 @@
 
   <section class="section" id="projects">
     <div class="wrap">
-      <div class="s-head">
+      <div class="s-head rv">
         <div>
           <h2>Projects</h2>
           <p class="s-sub">The five principal projects maintained by the organization.</p>
@@ -360,35 +366,35 @@
       </div>
 
       <ol class="projects" id="projList" tabindex="0" role="region" aria-label="Projects, scroll sideways on small screens">
-        <li class="project">
+        <li class="project rv">
           <div class="p-top"><span class="p-kind">worker</span><span class="status"><span class="mark" aria-hidden="true"></span>Active</span></div>
           <h3 class="p-title"><a href="https://github.com/whitedragon-software/relay">relay</a></h3>
           <p class="p-desc">A single-file Cloudflare Worker that forwards and rewrites web pages so that they load through a domain you control, including links, forms, scripts and stylesheets. Intended for networks on which the open web is not directly reachable.</p>
           <ul class="tags"><li>Cloudflare Workers</li><li>Proxy</li><li>Single file</li></ul>
           <p class="p-repo">whitedragon-software/relay <span class="arw" aria-hidden="true">&#8599;</span></p>
         </li>
-        <li class="project">
+        <li class="project rv">
           <div class="p-top"><span class="p-kind">desktop</span><span class="status"><span class="mark" aria-hidden="true"></span>Active</span></div>
           <h3 class="p-title"><a href="https://github.com/whitedragon-software/daybreak">daybreak</a></h3>
           <p class="p-desc">A minimal multi-tab desktop browser built on Electron's BaseWindow and WebContentsView APIs: a frameless window with a custom tab strip and address bar, real per-tab browsing contexts rather than iframes, and a small set of internal pages served from a genuine registered <code>daybreak://</code> protocol.</p>
           <ul class="tags"><li>Electron</li><li>Desktop</li><li>Multi-tab</li></ul>
           <p class="p-repo">whitedragon-software/daybreak <span class="arw" aria-hidden="true">&#8599;</span></p>
         </li>
-        <li class="project">
+        <li class="project rv">
           <div class="p-top"><span class="p-kind">worker</span><span class="status"><span class="mark" aria-hidden="true"></span>Active</span></div>
           <h3 class="p-title"><a href="https://github.com/whitedragon-software/webcore">webcore</a></h3>
           <p class="p-desc">A chat assistant that runs entirely on Cloudflare Workers AI. The model answers inside the same request that serves the page, so there is no separate backend to run, scale or keep online.</p>
           <ul class="tags"><li>Workers AI</li><li>JavaScript</li><li>Edge inference</li></ul>
           <p class="p-repo">whitedragon-software/webcore <span class="arw" aria-hidden="true">&#8599;</span></p>
         </li>
-        <li class="project">
+        <li class="project rv">
           <div class="p-top"><span class="p-kind">worker</span><span class="status"><span class="mark" aria-hidden="true"></span>Active</span></div>
           <h3 class="p-title"><a href="https://github.com/whitedragon-software/outbox">outbox</a></h3>
           <p class="p-desc">A single-file Cloudflare Worker that sends email through Resend from your own domain. It adds a compose page with live preview, a send history stored in D1, and a usage dashboard.</p>
           <ul class="tags"><li>Cloudflare Workers</li><li>Email</li><li>Single file</li></ul>
           <p class="p-repo">whitedragon-software/outbox <span class="arw" aria-hidden="true">&#8599;</span></p>
         </li>
-        <li class="project">
+        <li class="project rv">
           <div class="p-top"><span class="p-kind">browser</span><span class="status"><span class="mark" aria-hidden="true"></span>Active</span></div>
           <h3 class="p-title"><a href="https://github.com/whitedragon-software/whitedragon-authenticator">whitedragon-authenticator</a></h3>
           <p class="p-desc">A local-only TOTP authenticator in a single HTML file. Codes are generated in the browser and accounts stay on your device, with no server and no account.</p>
@@ -402,8 +408,8 @@
 
   <section class="section" id="approach">
     <div class="wrap">
-      <div class="s-head"><h2>Approach</h2></div>
-      <div class="grid3">
+      <div class="s-head rv"><h2>Approach</h2></div>
+      <div class="grid3 rv">
         <div class="cell">
           <h3>minimal by default</h3>
           <p>A single file is used wherever a single file is sufficient. There is no build pipeline, no framework, and no dependency tree requiring continual maintenance.</p>
@@ -422,9 +428,9 @@
 
   <section class="section" id="license">
     <div class="wrap">
-      <div class="s-head"><h2>Licenses</h2><p class="count">2 available</p></div>
+      <div class="s-head rv"><h2>Licenses</h2><p class="count">2 available</p></div>
 
-      <div class="panel">
+      <div class="panel rv">
         <div class="lic">
           <h3>WD-NCL v1.0</h3>
           <p class="d">The White Dragon Non-Commercial License: a custom non-commercial open-source license with an absolute liability waiver, written from scratch rather than borrowed. It applies only where a repository says so, and it does not govern this website or the other projects by default.</p>
@@ -461,8 +467,8 @@
 
   <section class="section" id="contact">
     <div class="wrap">
-      <div class="s-head"><div><h2>Feedback and contributions</h2><p class="s-sub">Feedback, bug reports and pull requests are welcome across all the projects.</p></div></div>
-      <div class="links">
+      <div class="s-head rv"><div><h2>Feedback and contributions</h2><p class="s-sub">Feedback, bug reports and pull requests are welcome across all the projects.</p></div></div>
+      <div class="links rv">
         <a href="https://github.com/whitedragon-software"><small>GitHub</small><b>whitedragon-software</b></a>
         <a href="https://dev.to/whitedragon"><small>Writing on DEV</small><b>dev.to/whitedragon</b></a>
         <a href="https://t.me/whitedragon_software"><small>Telegram channel</small><b>t.me/whitedragon_software</b></a>
@@ -618,6 +624,20 @@
     list.addEventListener("scroll", paint, { passive: true });
     window.addEventListener("resize", paint);
     paint();
+  }
+
+  /* Scroll reveal */
+  var rvEls = document.querySelectorAll(".rv");
+  if (!reduce && "IntersectionObserver" in window && rvEls.length) {
+    document.documentElement.classList.add("js-rv");
+    var pi = 0;
+    for (var q = 0; q < rvEls.length; q++) {
+      if (rvEls[q].classList.contains("project")) { rvEls[q].style.setProperty("--d", ((pi % 2) * 0.08) + "s"); pi++; }
+    }
+    var rio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); rio.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    for (var w = 0; w < rvEls.length; w++) { rio.observe(rvEls[w]); }
   }
 
   /* Pause looping animation while the background / shell is off screen. */
